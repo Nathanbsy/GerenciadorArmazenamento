@@ -18,6 +18,8 @@ public class Movimentacao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    private String cliente;
+
     @ManyToOne
     @JoinColumn(name = "produto_id", nullable = false)
     private Produto produto;
