@@ -2,6 +2,8 @@ package com.estudos.gerenciador_armazenamento.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import java.math.BigDecimal;
 import java.util.UUID;
@@ -15,15 +17,18 @@ import java.util.UUID;
 public class Produto {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
+    @JdbcTypeCode(SqlTypes.VARCHAR)
     private UUID id;
 
-    @Column(unique = true, nullable = false)
+    @Column
     private String sku;
 
-    @Column(nullable = false)
+    @Column
     private String nomeProduto;
+
+    @Column
     private String descricaoProduto;
 
-    @Column(nullable = false)
+    @Column
     private BigDecimal precoProduto;
 }

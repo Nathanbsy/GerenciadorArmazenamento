@@ -21,10 +21,9 @@ public class Movimentacao {
     private String cliente;
 
     @ManyToOne
-    @JoinColumn(name = "produto_id", nullable = false)
+    @JoinColumn(name = "ProdutoId", nullable = false)
     private Produto produto;
 
-    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private String tipo;
 
