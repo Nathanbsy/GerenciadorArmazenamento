@@ -1,13 +1,12 @@
 package com.estudos.gerenciador_armazenamento.service;
 
 import com.estudos.gerenciador_armazenamento.domain.Produto;
-import com.estudos.gerenciador_armazenamento.dto.CreateProdutoDto;
-import com.estudos.gerenciador_armazenamento.dto.UpdateProdutoDto;
+import com.estudos.gerenciador_armazenamento.dto.produto.CreateProdutoDto;
+import com.estudos.gerenciador_armazenamento.dto.produto.UpdateProdutoDto;
 import com.estudos.gerenciador_armazenamento.repository.ProdutoRepository;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
